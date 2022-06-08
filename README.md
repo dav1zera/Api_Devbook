@@ -124,7 +124,7 @@ Os seguintes comandos foram utilizados para fazer essas requisições:
 	descurtir publicação,      método POST,    rota => localhost:5000/publicacoes/descurtir
 	
 	
-	Aviso: NO VÍDEO DO FUNCIONAMENTO DA API, FORAM TESTADAS APENAS AS ROTAS DE USUÁRIOS 
+	Aviso: NO VÍDEO DO FUNCIONAMENTO DA API, FORAM TESTADAS APENAS AS ROTAS DE USUÁRIOS!
 	
 	
 	
