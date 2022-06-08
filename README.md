@@ -1,7 +1,7 @@
 # api_devbook
 
 Devbook é uma pequena api escrita em golang, que simula uma rede social de livros, onde permite criar, atualizar, deletar e buscar usuários através dos métodos de CRUD
-O sistema possui 2 tabelas Usuários e Publicações.
+O sistema possui 2 tabelas principais Usuários e Publicações.
 Na tabela Usuários temos duas tabelas, usuários e seguidores.
 Através dos métodos de CRUD podemos fazer o seguinte para essa tabela:
 
@@ -10,8 +10,8 @@ Através dos métodos de CRUD podemos fazer o seguinte para essa tabela:
 	PUT => Atualizar usuário
 	DELETE => Deletar usuário	
 
-A segunda tabela é chamada de Publicações, nela usamos os mesmos métodos CRUD descritos lá em cima, mas tem algumas funcionalidades a mais
-Como buscar publicações de acordo com os usuários que segue, curtir e discutir publicações
+A segunda tabela é chamada de Publicações, nela usamos os mesmos métodos CRUD descritos lá em cima, mas tem algumas funcionalidades a mais,
+Como buscar publicações de acordo com os usuários que segue, curtir e discutir publicações.
 
 	Estrutura da Aplicação
 	A api é dividida em 2 tipos de pacotes auxiliares e principais
@@ -45,7 +45,7 @@ Como buscar publicações de acordo com os usuários que segue, curtir e discuti
 
 	Respostas => Padronizar as respostas
 	
-Banco de dados
+Banco de dados;
 
 O banco de dados da api foi feita usando o MySql e tem como seguintes tabelas: 
 
@@ -93,4 +93,40 @@ O banco de dados da api foi feita usando o MySql e tem como seguintes tabelas:
 	    criadaEm timestamp default current_timestamp
 	) ENGINE=INNODB;
 
+Postman;
 
+Para testar as rotas, requisições HTTP da api usei a aplicação do Postman.
+
+Os seguintes comandos foram utilizados para fazer essas requisições:
+
+	Tabela de usuários(Primeira tabela criada no Mysql)
+	criar usuário, 	   método POST,   rota => localhost:5000/usuarios,
+	fazer login, 	   método POST,   rota => localhost:5000/login,
+	buscar usuário,    método GET,    rota => localhost:5000/usuarios/id,
+	buscar usuários,   método GET,    rota => localhost:5000/usuarios,
+	atualizar usuário, método PUT,    rota => localhost:5000/usuarios/id,
+	deletar usuário,   método DELETE, rota => localhost:5000/usuarios/id,
+	
+	
+	Tabela de seguidores(segunda tabela criada no Mysql)
+	seguir usuário, 	   método POST,   rota => localhost:5000/usuarios/id/seguir,
+	parar de seguir, 	   método POST,   rota => localhost:5000/usuarios/id/parar-de-seguir,
+	ver seguidores,            método GET,    rota => localhost:5000/usuarios/id/seguidores,
+	ver quem está seguindo,    método GET,    rota => localhost:5000/usuarios/id,seguindo,
+	
+	
+	Tabela de publicações(terceira tabela criada no Mysql)
+	criar publicação, 	   método POST,    rota => localhost:5000/publicacoes,
+	buscar publicação, 	   método GET,     rota => localhost:5000/publicacoes/id,
+	atualizar publicação,      método PUT,     rota => localhost:5000/publicacoes/id,
+	deletar publicação,        método DELETE,  rota => localhost:5000/publicacoes/id,
+	curtir publicação,         método POST,    rota => localhost:5000/publicacoes/curtir,
+	descurtir publicação,      método POST,    rota => localhost:5000/publicacoes/descurtir
+	
+	
+	Aviso: NO VÍDEO DO FUNCIONAMENTO DA API, FORAM TESTADAS APENAS AS ROTAS DE USUÁRIOS 
+	
+	
+	
+	
+	
