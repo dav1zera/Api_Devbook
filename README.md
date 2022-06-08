@@ -108,14 +108,14 @@ Os seguintes comandos foram utilizados para fazer essas requisições:
 	deletar usuário,   método DELETE, rota => localhost:5000/usuarios/id,
 	
 	
-	Tabela de seguidores(segunda tabela criada no Mysql)
+	Tabela de seguidores(Segunda tabela criada no Mysql)
 	seguir usuário, 	   método POST,   rota => localhost:5000/usuarios/id/seguir,
 	parar de seguir, 	   método POST,   rota => localhost:5000/usuarios/id/parar-de-seguir,
 	ver seguidores,            método GET,    rota => localhost:5000/usuarios/id/seguidores,
 	ver quem está seguindo,    método GET,    rota => localhost:5000/usuarios/id,seguindo,
 	
 	
-	Tabela de publicações(terceira tabela criada no Mysql)
+	Tabela de publicações(Terceira tabela criada no Mysql)
 	criar publicação, 	   método POST,    rota => localhost:5000/publicacoes,
 	buscar publicação, 	   método GET,     rota => localhost:5000/publicacoes/id,
 	atualizar publicação,      método PUT,     rota => localhost:5000/publicacoes/id,
